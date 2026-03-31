@@ -49,7 +49,7 @@ The system implements a simple pipeline:
 
 ### Build
 
-``bash
+bash
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
