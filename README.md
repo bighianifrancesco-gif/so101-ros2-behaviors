@@ -49,7 +49,7 @@ The system implements a simple pipeline:
 
 ### Build
 
-bash
+``bash
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
@@ -68,7 +68,7 @@ ros2 param set /behavior_controller_node mode scared
 ros2 param set /behavior_controller_node mode angry
 Demo
 
-👉 https://www.linkedin.com/feed/update/urn:li:activity:7444759246388461568/?originTrackingId=2RtYBHH2mDHeswThPSEr8w%3D%3D
+👉(https://www.linkedin.com/feed/update/urn:li:activity:7444759246388461568/?originTrackingId=2RtYBHH2mDHeswThPSEr8w%3D%3D)
 
 Notes
 Designed as a compact integration/demo project
