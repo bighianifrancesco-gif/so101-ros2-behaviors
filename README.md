@@ -48,39 +48,83 @@ The system implements a simple pipeline:
 
 ### Build
 
- bash
--cd ~/ros2_ws
--colcon build
--source install/setup.bash
--Start system
+```bash
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+```
 
--Run each node in a separate terminal:
+---
 
--ros2 run so101_hardware_py arm_interface_node
--ros2 run so101_hardware_py imu_serial_node
--ros2 run so101_control_py behaviour_controller_node
--Launch RViz (digital twin)
--ros2 launch so101_description display.launch.py
--Change behavior mode (live)
--ros2 param set /behavior_controller_node mode disappointed
--ros2 param set /behavior_controller_node mode scared
--ros2 param set /behavior_controller_node mode angry
+### Start system
 
+Run each node in a separate terminal:
 
-##Demo
+```bash
+ros2 run so101_hardware_py arm_interface_node
+```
+
+```bash
+ros2 run so101_hardware_py imu_serial_node
+```
+
+```bash
+ros2 run so101_control_py behaviour_controller_node
+```
+
+---
+
+### Launch RViz (digital twin)
+
+```bash
+ros2 launch so101_description display.launch.py
+```
+
+---
+
+### Change behavior mode (live)
+
+```bash
+ros2 param set /behavior_controller_node mode disappointed
+ros2 param set /behavior_controller_node mode scared
+ros2 param set /behavior_controller_node mode angry
+```
+
+---
+
+## Demo
 
 👉 https://www.linkedin.com/feed/update/urn:li:activity:7444759246388461568/
 
-Notes
-Designed as a compact integration/demo project
-Parameters (serial ports, calibration files) must be adapted to your setup
-For stable USB communication, prefer:
+---
+
+## Assets
+
+The 3D model (STL files) and base robot description are derived from the LeRobot SO-101 project.
+
+You can find the original assets here:
+https://huggingface.co/docs/lerobot/so101
+
+## Notes
+
+- Designed as a compact integration/demo project  
+- Parameters (serial ports, calibration files) must be adapted to your setup  
+- For stable USB communication, prefer:
+
+```bash
 /dev/serial/by-id/...
+```
 
 instead of:
 
+```bash
 /dev/ttyUSB0
-Author
+```
 
-Francesco Bighiani
+
+---
+
+## Author
+
+Francesco Bighiani  
 Master’s student in Mechatronics Engineering — Politecnico di Torino
