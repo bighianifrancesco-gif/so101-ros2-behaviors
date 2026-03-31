@@ -37,7 +37,6 @@ The system implements a simple pipeline:
 - MPU6050 IMU (Arduino serial interface)  
 
 ### ROS 2 Packages
-
 - `so101_hardware_py` — arm + IMU interface  
 - `so101_control_py` — behavior controller  
 - `so101_description` — URDF + RViz  
@@ -49,7 +48,7 @@ The system implements a simple pipeline:
 
 ### Build
 
-bash
+## bash
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
@@ -68,7 +67,7 @@ ros2 param set /behavior_controller_node mode scared
 ros2 param set /behavior_controller_node mode angry
 Demo
 
-👉(https://www.linkedin.com/feed/update/urn:li:activity:7444759246388461568/?originTrackingId=2RtYBHH2mDHeswThPSEr8w%3D%3D)
+👉 https://www.linkedin.com/feed/update/urn:li:activity:7444759246388461568/
 
 Notes
 Designed as a compact integration/demo project
@@ -76,8 +75,9 @@ Parameters (serial ports, calibration files) must be adapted to your setup
 For stable USB communication, prefer:
 /dev/serial/by-id/...
 
-instead of /dev/ttyUSB0
+instead of:
 
+/dev/ttyUSB0
 Author
 
 Francesco Bighiani
