@@ -48,24 +48,26 @@ The system implements a simple pipeline:
 
 ### Build
 
-## bash
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
-Start system
+ bash
+-cd ~/ros2_ws
+-colcon build
+-source install/setup.bash
+-Start system
 
-Run each node in a separate terminal:
+-Run each node in a separate terminal:
 
-ros2 run so101_hardware_py arm_interface_node
-ros2 run so101_hardware_py imu_serial_node
-ros2 run so101_control_py behaviour_controller_node
-Launch RViz (digital twin)
-ros2 launch so101_description display.launch.py
-Change behavior mode (live)
-ros2 param set /behavior_controller_node mode disappointed
-ros2 param set /behavior_controller_node mode scared
-ros2 param set /behavior_controller_node mode angry
-Demo
+-ros2 run so101_hardware_py arm_interface_node
+-ros2 run so101_hardware_py imu_serial_node
+-ros2 run so101_control_py behaviour_controller_node
+-Launch RViz (digital twin)
+-ros2 launch so101_description display.launch.py
+-Change behavior mode (live)
+-ros2 param set /behavior_controller_node mode disappointed
+-ros2 param set /behavior_controller_node mode scared
+-ros2 param set /behavior_controller_node mode angry
+
+
+##Demo
 
 👉 https://www.linkedin.com/feed/update/urn:li:activity:7444759246388461568/
 
